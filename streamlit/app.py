@@ -28,10 +28,18 @@ db_con=sqla.create_engine(url+'/'+db)
 # Sidebar navigation
 st.sidebar.title('cart2insights')
 option=st.sidebar.selectbox('select a section:',
-                            ['Business Overview','Sales Analysis','Customer Analysis','Seller & Product Analysis',
+                            ['Home','Business Overview','Sales Analysis','Customer Analysis','Seller & Product Analysis',
                              'Delivery Analysis','Customer Experience'])
 # Sections
-if option=='Business Overview':
+if option == "Home":
+    st.title("Cart2Insights: Decoding E-Commerce Performance")
+    st.markdown("""
+    A dashboard analysing the **Olist Brazilian e-commerce dataset**
+    (~99,000 orders, 2016- 2018), connected live to a MySQL database.
+
+    Objective is to uncover business insights on sales, customers, sellers, delivery performance and customer satisfaction.""")
+
+elif option=='Business Overview':
     st.title('Business Overview')
     # Q1. All KPIs
     q1="""select 
