@@ -54,15 +54,15 @@ elif option=='Business Overview':
 
     # First row of KPI cards
     col1,col2,col3=st.columns(3)
-    col1.metric('Total Revenue', f'R$ {kpi['Total_revenue'][0]:,.0f}')
-    col2.metric('Total Orders', f'{kpi['Total_orders'][0]:,}')
-    col3.metric('Total Customers',f'{kpi['Total_customers'][0]:,}')
+    col1.metric('Total Revenue', f"R$ {kpi['Total_revenue'][0]:,.0f}")
+    col2.metric('Total Orders', f"{kpi['Total_orders'][0]:,}")
+    col3.metric('Total Customers',f"{kpi['Total_customers'][0]:,}")
 
     # Second row of LPI cards
     col4,col5,col6=st.columns(3)
-    col4.metric('Total Sellers',f'{kpi['Total_sellers'][0]:,}')
-    col5.metric('Average order value',f'{kpi['Avg_order_value'][0]:,.2f}')
-    col6.metric('Average order reviews',f'{kpi['Avg_order_reviews'][0]:,.2f}/5')
+    col4.metric('Total Sellers',f"{kpi['Total_sellers'][0]:,}")
+    col5.metric('Average order value',f"{kpi['Avg_order_value'][0]:,.2f}")
+    col6.metric('Average order reviews',f"{kpi['Avg_order_reviews'][0]:,.2f}/5")
 
 
 elif option=='Sales Analysis':
